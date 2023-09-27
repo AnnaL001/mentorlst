@@ -21,7 +21,4 @@ fun main() {
             return@forEachIndexed
         }
     }
-
-
-
 }
