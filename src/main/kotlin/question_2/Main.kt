@@ -1,6 +1,8 @@
-import question_2.ReverseWords
+package question_2
 
-fun main(args: Array<String>){
+import getStringsFromFile
+
+fun main(){
     // Initialize class
     val reverse = ReverseWords()
 

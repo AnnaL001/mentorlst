@@ -4,7 +4,7 @@ import getIntsFromFile
 import getStringsFromFile
 
 
-fun main(args: Array<String>) {
+fun main() {
     val multiples = Multiples()
     val inputList = getIntsFromFile("src/main/kotlin/inputs/question_1_input.txt")
     val outputList = getStringsFromFile("src/main/kotlin/outputs/question_1_output.txt")
