@@ -2,7 +2,7 @@ import question_2.ReverseWords
 
 fun main(args: Array<String>){
     // Initialize class
-    val reverse = ReverseWords();
+    val reverse = ReverseWords()
 
     // Get input & output
     val inputs = getStringsFromFile("src/main/kotlin/inputs/question_2_input.txt")
@@ -11,11 +11,11 @@ fun main(args: Array<String>){
 
     // Reverse words in input sentence
     inputs.drop(1).forEachIndexed { index, sentence ->
-        val actual = reverse.reverseSentenceWords(sentence);
-        println(actual);
+        val actual = reverse.reverseSentenceWords(sentence)
+        println(actual)
 
         // Add tests
-        val output = outputs[index];
+        val output = outputs[index]
         if(actual.replace("\\s+".toRegex(), "") != output.replace("\\s+".toRegex(), "")){
             println("FAILED")
             println("EXPECTED: $output")

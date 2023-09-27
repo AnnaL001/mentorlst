@@ -6,8 +6,8 @@ class Multiples {
      * Assumption: Input provided is only of Integer type
      */
     fun multiplesOfThreeAndFive(num: Int): String {
-        var found = false;
-        val stringBuilder = StringBuilder();
+        var found = false
+        val stringBuilder = StringBuilder()
 
         for (i in 1..num){
             if(i % 15 == 0){

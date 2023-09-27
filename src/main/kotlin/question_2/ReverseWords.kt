@@ -2,14 +2,14 @@ package question_2
 
 class ReverseWords {
     /**
-     * Reverse single word
+     * Reverse single word using Two pointers algorithm
      */
     private fun reverseWordsInSentence(word: String): String{
         // Check for empty spaces
-        if(word == " ") return " ";
+        if(word == " ") return " "
 
-        val stringBuilder = StringBuilder();
-        val chars = word.toCharArray();
+        val stringBuilder = StringBuilder()
+        val chars = word.toCharArray()
 
         var startIndex = 0;
         var endIndex = chars.size - 1
@@ -23,7 +23,7 @@ class ReverseWords {
             endIndex--
         }
 
-        return stringBuilder.append(chars).toString();
+        return stringBuilder.append(chars).toString()
     }
 
     /**
@@ -31,8 +31,8 @@ class ReverseWords {
      */
     fun reverseSentenceWords(sentence: String): String {
         // Remove leading/trailing whitespace and transform to list
-        val words = sentence.trim().split(" ");
-        val transformed = StringBuilder();
+        val words = sentence.trim().split(" ")
+        val transformed = StringBuilder()
 
         words.forEachIndexed { index, word ->
             val reversed = reverseWordsInSentence(word)
