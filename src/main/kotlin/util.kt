@@ -10,18 +10,18 @@ import java.lang.Exception
  * @return An array list of strings
  */
 fun getStringsFromFile(filePath: String): ArrayList<String> {
-    val outputFile = File(filePath);
-    val outputStream = FileInputStream(outputFile);
-    val reader = BufferedReader(InputStreamReader(outputStream));
+    val outputFile = File(filePath)
+    val outputStream = FileInputStream(outputFile)
+    val reader = BufferedReader(InputStreamReader(outputStream))
 
-    val outputList = ArrayList<String>();
+    val outputList = ArrayList<String>()
 
-    var line: String? = reader.readLine();
+    var line: String? = reader.readLine()
 
     try {
         while (line != null){
-            outputList.add(line);
-            line = reader.readLine();
+            outputList.add(line)
+            line = reader.readLine()
         }
     } catch (e: Exception){
         println("Error occurred while reading file: ${e.message}")
@@ -29,7 +29,7 @@ fun getStringsFromFile(filePath: String): ArrayList<String> {
         reader.close()
     }
 
-    return outputList;
+    return outputList
 }
 
 /**
@@ -39,23 +39,23 @@ fun getStringsFromFile(filePath: String): ArrayList<String> {
  * @return An array list of integers
  */
 fun getIntsFromFile(filePath: String): ArrayList<Int> {
-    val inputFile = File(filePath);
-    val inputStream = FileInputStream(inputFile);
-    val reader = BufferedReader(InputStreamReader(inputStream));
+    val inputFile = File(filePath)
+    val inputStream = FileInputStream(inputFile)
+    val reader = BufferedReader(InputStreamReader(inputStream))
 
-    val inputList = ArrayList<Int>();
+    val inputList = ArrayList<Int>()
 
-    var line: String? = reader.readLine();
+    var line: String? = reader.readLine()
 
     try {
         while (line != null){
             try {
-                val number = line.toInt();
-                inputList.add(number);
+                val number = line.toInt()
+                inputList.add(number)
             } catch (e: NumberFormatException){
                 println("Invalid integer conversion: $e")
             }
-            line = reader.readLine();
+            line = reader.readLine()
         }
     } catch (e: Exception){
         println("Error occurred while reading file: ${e.message}")
@@ -63,6 +63,6 @@ fun getIntsFromFile(filePath: String): ArrayList<Int> {
         reader.close()
     }
 
-    return inputList;
+    return inputList
 }
 
