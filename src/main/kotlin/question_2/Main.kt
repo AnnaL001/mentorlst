@@ -21,6 +21,7 @@ fun main(){
         if(actual.replace("\\s+".toRegex(), "") != output.replace("\\s+".toRegex(), "")){
             println("FAILED")
             println("EXPECTED: $output")
+            // Stop execution if failed tests
             return@forEachIndexed
         }
     }
