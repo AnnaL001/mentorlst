@@ -11,7 +11,7 @@ class ReverseWords {
         val stringBuilder = StringBuilder()
         val chars = word.toCharArray()
 
-        var startIndex = 0;
+        var startIndex = 0
         var endIndex = chars.size - 1
 
         while (startIndex < endIndex){
